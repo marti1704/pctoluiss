@@ -7,21 +7,32 @@ Code, Compile, Run and Debug online from anywhere in world.
 
 *******************************************************************************/
 #include <stdio.h>
-void ft_ft(int*nbr,int*x)
-{
-    *nbr=42;
-    *x=12;
-}
+
 int main()
 {
-   int nbr=2;
-   int x=7;
-   
-   
-   printf("il valore iniziale:%d\n",x);
-   ft_ft(&x,&nbr);
-   
-   printf("il valore di:%d\n",x);
-   printf("il valore effettivo dopo aver richiamato ft_ft:%d\n",nbr);
-   return 0;
-}
+    int numero;
+    int potenza;
+    int risultato;
+    
+    printf("prendere un numero da elevare alla potenza\n");
+    scanf("%d",&numero);
+    printf("di quanto vuoi elevare numero\n");
+    scanf("%d",&potenza);
+    risultato=1;
+    
+    while(potenza>0)
+    {
+        
+        risultato= risultato*numero;
+        
+        potenza = potenza - 1;
+        
+    }
+       printf("il risultato e'%d\n",risultato);
+return 0;
+}  
+     
+     
+     
+     
+    

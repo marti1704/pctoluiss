@@ -7,30 +7,19 @@ Code, Compile, Run and Debug online from anywhere in world.
 
 *******************************************************************************/
 #include <stdio.h>
-void ft_ultimate_ft(int*********nbr)
+
+void lett(char B)
 {
-    *********nbr=42;
-    
+    printf("la lettera inserita e'%c\n",B);
 }
-int main()
-{
-   int a, *b, **c, ***d, ****e, *****f, ******g, *******h, ********i, *********l;
-   
-   a=1;
-   b=&a;
-   c=&b;
-   d=&c;
-   e=&d;
-   f=&e;
-   g=&f;
-   h=&g;
-   i=&h;
-   l=&i;
-   
-  
-   ft_ultimate_ft(l);
-   
-   
-   printf("%d\n",*********l);
-   return 0;
+ 
+ int main()
+ {
+    char lettera; 
+     printf("inserire una lettera\n");
+     scanf("%c",&lettera);
+    lett(lettera); 
+    
+    return 0;
+     
 }

@@ -7,18 +7,26 @@ Code, Compile, Run and Debug online from anywhere in world.
 
 *******************************************************************************/
 #include <stdio.h>
-void ft_ft(int*nbr)
+
+int fattoriale (int numero)
 {
-    *nbr=42;
+     int tot=1;
+     while(numero>0)
+ {    tot=tot*numero;
+     numero=numero-1;
+ }
+      return tot;
 }
+    
+    
 int main()
+
 {
-   int nbr=2;
-   int x=7;
+    int N;
    
-   printf("il valore iniziale:%d\n",x);
-   ft_ft(&x);
-   printf("il valore di:%d\n",x);
-   printf("il valore effettivo dopo aver richiamato ft_ft:%d\n",nbr);
-   return 0;
+    printf("prendi un numero\n");  
+    scanf("%d",&N);
+     printf("il fattoriale e':%d\n",fattoriale(N));
+   
+ return 0;
 }

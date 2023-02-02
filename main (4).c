@@ -7,24 +7,49 @@ Code, Compile, Run and Debug online from anywhere in world.
 
 *******************************************************************************/
 #include <stdio.h>
-void ft_ft(int*nbr,int*x,int y)
+
+float ft_potenza(float numero,float potenza)
 {
-    *nbr=42;
-    *x=12;
-     y=102;
+    float risultato=1;
+    float risultato2;
+    
+    if(potenza>=0)
+{    
+    while(potenza>0)
+    {
+         risultato= risultato*numero;
+         potenza = potenza - 1;
+    } 
+       return risultato;
 }
-int main()
+   else if (potenza<0)
+ {
+      while(potenza<0)
+      {
+      risultato= risultato*numero;
+      potenza = potenza+1;
+      risultato2=1/risultato;
+      }
+ 
+      return risultato2;
+      }
+ }
+float main()
 {
-   int nbr=2;
-   int x=7;
-   int y=3;
-   
-   
-   printf("il valore iniziale:%d\n",x);
-   ft_ft(&x,&nbr,y);
-   
-   printf("il valore di:%d\n",x);
-   printf("il valore di:%d\n",y);
-   printf("il valore effettivo dopo aver richiamato ft_ft:%d\n",nbr);
-   return 0;
-}
+    float numero;
+    float potenza;
+    float risultato;
+    
+    printf("prendere un numero da elevare alla potenza\n");
+    scanf("%f",&numero);
+    printf("di quanto vuoi elevare numero\n");
+    scanf("%f",&potenza);
+    risultato=ft_potenza(numero,potenza);
+    printf("il risultato e'%f\n",risultato);
+return 0;
+}  
+     
+     
+     
+     
+    

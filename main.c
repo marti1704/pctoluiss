@@ -8,36 +8,26 @@ Code, Compile, Run and Debug online from anywhere in world.
 *******************************************************************************/
 #include <stdio.h>
 
-int main()
+void fattoriale (int numero)
 {
-    int prezzo;
-    int sconto;
-    int n_ordini;
-    float totale;
-    
-    prezzo=5;
-    n_ordini=1;
-    while(n_ordini>0)
-    {
-    printf("quanti ordini?\n");
-    scanf("%d",&n_ordini);
-    if(n_ordini<=30)
-    {
-        totale=n_ordini*prezzo;
-        printf("il totale che devi devi pagare e':%f\n",totale);
-    }
-    else if (n_ordini>=30 && n_ordini>=50)
-    {
-        totale=n_ordini*prezzo*(1-0.10);
-        printf("il totale scontato e':%f\n",totale);
-    }
-   else
-   {
-       totale= n_ordini*prezzo*(1-0.15);
-       printf("il totale scontato e':%f\n",totale);
-       
+     int tot=1;
+     while(numero>0)
+ {    tot=tot*numero;
+     numero=numero-1;
  }
+     printf("il fattoriale e':%d\n",tot);
+}
+    
+    
+int main()
+
+{
+    int N;
+    printf("prendi un numero\n");  
+    scanf("%d",&N);
+    
+    fattoriale(N);
     
    
-}
+ return 0;
 }
